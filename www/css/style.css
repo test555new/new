@@ -1,0 +1,655 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI';
+    background: #dff4ff;
+    overflow-x: hidden;
+}
+
+
+/* левое меню */
+#menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background: #3d8bfd;
+    padding: 100px 20px 20px 20px;
+    transition: transform 0.4s ease;
+}
+
+
+.menu-hidden {
+    transform: translateY(-100%);
+}
+
+.logo {
+    position: fixed;
+    top: -30px;
+    left: 30px;
+    width: 140px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+
+#menu ul li {
+    margin-bottom: 15px;
+}
+
+
+#menu ul li a {
+    display: block;
+    background: #66a8ff;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+#menu ul li a:hover {
+    background: #8ec0ff;
+}
+
+
+/* основной контент */
+#content {
+    margin-left: 240px;
+    padding: 30px;
+}
+
+
+#content h1 {
+    color: #155799;
+}
+
+
+/* поиск */
+.search_block {
+    margin-top: 20px;
+}
+
+
+.search_block input {
+    width: 520px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #7eb8ff;
+    font-size: 15px;
+}
+
+
+/* кнопки категорий */
+.category_buttons {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+.category_buttons a {
+    margin-right: 15px;
+    padding: 12px 20px;
+    background: #3d8bfd;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+
+.category_buttons a:hover {
+    background: #66a8ff;
+}
+
+
+/* блок карточек */
+.cards {
+    max-width: 1600px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+/* карточка товара */
+.card {
+    width: 260px;
+    background: white;
+    border-radius: 20px;
+    padding: 15px;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 170px;
+    border-radius: 15px;
+}
+
+
+.card h3 {
+    color: #155799;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+
+.card p {
+    font-size: 14px;
+    color: #444444;
+}
+
+/* блок таблицы */
+.table_block {
+    width: 95%;
+}
+
+
+/* таблица заказов */
+.orders_table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+/* ячейки */
+.orders_table th,
+.orders_table td {
+    border: 1px solid #9ecbff;
+    padding: 14px;
+    text-align: center;
+}
+
+
+/* шапка */
+.orders_table th {
+    background: #3d8bfd;
+    color: white;
+}
+
+
+/* строки */
+.orders_table td {
+    background: #f4fbff;
+    color: #155799;
+}
+
+
+/* эффект наведения */
+.orders_table tr:hover td {
+    background: #dcefff;
+}
+
+
+
+/* профиль */
+.profile_block {
+    margin-top: 30px;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+}
+
+.profile_form input,
+.profile_form textarea {
+    box-sizing: border-box;
+}
+
+/* левая часть */
+.profile_left {
+    width: 250px;
+    text-align: center;
+    padding-right: 20px;
+}
+
+
+.profile_avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid #66a8ff;
+}
+
+
+.profile_left h2 {
+    margin-top: 15px;
+    color: #155799;
+}
+
+
+.profile_text {
+    color: #4d7fb3;
+    font-size: 14px;
+}
+
+
+/* правая часть */
+.profile_right {
+    width: 90%;
+    padding-left: 15px;
+}
+
+
+/* форма */
+.profile_form {
+    display: block;
+}
+
+
+.profile_form label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    color: #155799;
+}
+
+
+/* поля */
+.profile_form input,
+.profile_form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #9bc8ff;
+    border-radius: 10px;
+    background: #f4fbff;
+    font-size: 14px;
+}
+
+
+.profile_form textarea {
+    height: 80px;
+}
+
+
+/* кнопка */
+.profile_form button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #3d8bfd;
+    color: white;
+    font-weight: bold;
+}
+
+
+.profile_form button:hover {
+    background: #66a8ff;
+}
+
+.add_part_card {
+    margin-top: -140px;
+    background: white;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* картинка сверху */
+.add_part_img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 5px solid #66a8ff;
+    margin-bottom: 18px;
+}
+
+/* форма */
+.add_part_form {
+    text-align: left;
+}
+
+/* подписи */
+.add_part_form label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    color: #155799;
+    font-size: 15px;
+}
+
+/* поля ввода */
+.add_part_form input,
+.add_part_form textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #9bc8ff;
+    border-radius: 12px;
+    background: #f4fbff;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.add_part_form textarea {
+    height: 80px;
+    resize: none;
+}
+
+/* кнопка */
+.add_part_form button {
+    margin-top: 16px;
+    width: 100%;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 12px;
+    background: #3d8bfd;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.add_part_form button:hover {
+    background: #66a8ff;
+}
+
+/* ошибки формы */
+
+.error_message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+
+/* поле с ошибкой */
+.input_error {
+    border: 2px solid red !important;
+    background: #fcecec !important;
+}
+
+/* список категорий */
+.part_select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #9bc8ff;
+    border-radius: 12px;
+    background: #f4fbff;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+/* блок поиска */
+.search_block {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+
+/* кнопка поиска */
+.search_block button {
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    background: #3d8bfd;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.search_block button:hover {
+    background: #66a8ff;
+}
+
+/* фон модалки */
+#search_modal_bg {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+/* окно */
+#search_modal_box {
+    width: 400px;
+    background: white;
+    margin: 80px auto;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* картинка */
+#search_modal_box img {
+    width: 200px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+/* кнопка */
+#modal_close {
+    margin-top: 15px;
+    padding: 13px 23px;
+    border: none;
+    border-radius: 10px;
+    background: #3d8bfd;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#modal_close:hover {
+    background: #66a8ff;
+}
+
+/* фон */
+#add_modal_bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+/* окно */
+#add_modal_box {
+    width: 450px;
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 20px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* форма */
+#add_form label {
+    display: block;
+    margin-top: 10px;
+    color: #155799;
+}
+
+#add_form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 1px solid #9bc8ff;
+    background: #f4fbff;
+    box-sizing: border-box;
+}
+
+/* кнопки */
+.modal_buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+/* кнопка удаления */
+.delete_btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #ff4d4d;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.delete_btn:hover {
+    background: #e63b3b;
+}
+
+#add_order_btn {
+    margin: 15px 0;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 12px;
+    background: #3d8bfd;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#add_order_btn:hover {
+    background: #66a8ff;
+}
+
+.blue_btn {
+    margin: 15px 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    background: #3d8bfd;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.blue_btn:hover {
+    background: #66a8ff;
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    z-index: 9999;
+}
+
+.modal_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_window {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    width: 320px;
+    text-align: center;
+}
+
+.modal_avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px 0;
+}
+
+.modal_btn {
+    padding: 10px 20px;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.modal_btn:hover {
+    background: #357abd;
+}
+
+.accounts_table {
+    margin-top: 30px;
+}
+
+.accounts_row {
+    display: grid;
+    grid-template-columns: 60px 60px 1fr 1fr 100px;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.accounts_header {
+    font-weight: bold;
+    background: #f5f5f5;
+}
+
+.accounts_row img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* кнопка удалить */
+.btn_delete {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn_delete:hover {
+    background: #c0392b;
+}
