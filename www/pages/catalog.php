@@ -59,6 +59,7 @@ if (file_exists($jsonFile)) {
 
                 <div class="card"
 
+                    data-id="<?= htmlspecialchars($part['id']) ?>"
                     data-price="<?= htmlspecialchars($part['price']) ?> ₽"
                     data-tech="<?= htmlspecialchars($part['category']) ?>"
                     data-part-type="<?= htmlspecialchars($part['partType']) ?>"

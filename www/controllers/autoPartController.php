@@ -219,5 +219,43 @@ if ($action === 'save_part') {
     redirect('/www/pages/addDetail.php');
 }
 
+/* =========================
+   DELETE PART
+========================= */
+
+if ($action === 'delete_part') {
+
+    $id = (int)($_POST['id'] ?? 0);
+
+    $result = [];
+    $deleted = null;
+
+    foreach ($parts as $part) {
+
+        if (isset($part['id']) && $part['id'] === $id) {
+
+            $deleted = $part;
+
+            if (!empty($part['image'])) {
+                $path = __DIR__ . '/../..' . $part['image'];
+
+                if (file_exists($path)) {
+                    unlink($path);
+                }
+            }
+
+            continue;
+        }
+
+        $result[] = $part;
+    }
+
+    saveJson($dataFile, $result);
+
+    $return = $_POST['return'] ?? '/www/pages/catalog.php';
+
+    redirect($return);
+}
+
 /* fallback */
 redirect('/www/pages/addDetail.php');
